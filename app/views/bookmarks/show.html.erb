@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Todo list:</strong>
+  <%= @bookmark.todo_list %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bookmark.user %>
+</p>
+
+<%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |
+<%= link_to 'Back', bookmarks_path %>

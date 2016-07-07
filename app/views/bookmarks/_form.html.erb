@@ -1,0 +1,19 @@
+<%= form_for(bookmark) do |f| %>
+  <% if bookmark.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% bookmark.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">    
+   <%= f.select :todo_list_id, @todo_list.collect {|t| [ t.title, t.id ] } %>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
