@@ -4,7 +4,7 @@ class TodoListsController < ApplicationController
 
 
   def index
-    @todo_lists = TodoList.where(user_id: current_user.id)
+    @todo_lists = TodoList.where(user_id: current_user.id)  
   end
 
 
@@ -64,6 +64,6 @@ class TodoListsController < ApplicationController
     end
     
     def todo_list_params
-      params.require(:todo_list).permit(:title, :description)
+      params.require(:todo_list).permit(:title, :description, :private_list)
     end
 end
