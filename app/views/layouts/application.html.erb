@@ -22,8 +22,8 @@
 
   <div class="container">
   <% if user_signed_in? %>
-       <div class="link">
-         <%= link_to "Logout", destroy_user_session_path, :method => :delete  %>
+       <div class="links">
+         <%= link_to "#{current_user.email} (Logout)", destroy_user_session_path, :method => :delete  %>
        </div>    
     <% end %>
      <%= yield %>  	

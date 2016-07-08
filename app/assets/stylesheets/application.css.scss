@@ -50,7 +50,7 @@ body {
 	font-weight: 100;
 }
 
-.container {
+.container {    
 	width: 50%;
 	max-width: 750px;
 	background: $blue_opaque;
@@ -96,6 +96,14 @@ body {
 }
 
 .todo_list_sub_title {
+	margin: 0 0 3em 0;
+	text-align: center;
+	font-size: 0.9em;
+	color: white;
+	font-weight: 100;
+}
+
+.bookmark_th_title {
 	margin: 0 0 3em 0;
 	text-align: center;
 	font-size: 0.9em;
