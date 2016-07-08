@@ -1,4 +1,7 @@
+
 <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
-	 <%= f.text_field :content, placeholder: "New Todo", autofocus: true %>
-	 <%= f.submit %>
+	<% if show_link_actions? %>
+		 <%= f.text_field :content, placeholder: "New Todo", autofocus: true %>
+		 <%= f.submit %>
+	 <% end %>
 <% end %>

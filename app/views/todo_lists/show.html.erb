@@ -3,7 +3,7 @@
 <h2 class="todo_list_title"><%= @todo_list.title %> (<%= @todo_list.private_list ? 'Private' : 'Public' %>)</h2> 
 
 <p class="todo_list_sub_title"><%= @todo_list.description %></p>
-
+	
 
 <div id="todo_items_wrapper">
 	<%= render @todo_list.todo_items %>
@@ -13,8 +13,10 @@
 </div>
 
 <div class="links">
+  <% if show_link_actions? %>
 	<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> | 
 	<%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" } %>
-	| <%= link_to 'Back', todo_lists_path %>	
+  <% end %>
+	<%= link_to 'Back', todo_lists_path %>	
 </div>
 
